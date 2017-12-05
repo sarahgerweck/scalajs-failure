@@ -1,0 +1,284 @@
+[info] Compiling 1 Scala source to /Users/sarah/Code/parser-fail/target/scala-2.12/classes ...
+[error] ## Exception when compiling 1 sources to /Users/sarah/Code/parser-fail/target/scala-2.12/classes
+[error] requirement failed: 
+[error]   
+[error]      while compiling: /Users/sarah/Code/parser-fail/Fail.scala
+[error]         during phase: jscode
+[error]      library version: version 2.12.4
+[error]     compiler version: version 2.12.4
+[error]   reconstructed args: -bootclasspath /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/classes:/Users/sarah/.sbt/boot/scala-2.12.4/lib/scala-library.jar -classpath /Users/sarah/Code/parser-fail/target/scala-2.12/classes:/Users/sarah/.ivy2/cache/org.scala-js/scalajs-library_2.12/jars/scalajs-library_2.12-0.6.21.jar -Xplugin:/Users/sarah/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.4/jars/scalajs-compiler_2.12.4-0.6.21.jar
+[error] 
+[error]   last tree to typer: TypeTree(class String)
+[error]        tree position: line 5 of /Users/sarah/Code/parser-fail/Fail.scala
+[error]             tree tpe: String
+[error]               symbol: final class String in package lang
+[error]    symbol definition: final class String extends Serializable with Comparable with CharSequence (a ClassSymbol)
+[error]       symbol package: java.lang
+[error]        symbol owners: class String
+[error]            call site: object LexerUtil in package <empty>
+[error] 
+[error] == Source file context for tree position ==
+[error] 
+[error]      2 
+[error]      3 object LexerUtil {
+[error]      4   def reflectiveLongest[A <: { def chars: String }](data: A): Unit = {
+[error]      5     val fn = { a: A => a.chars }
+[error]      6     ()
+[error]      7   }
+[error]      8 }
+[error] scala.tools.nsc.Global.require(Global.scala:279)
+[error] org.scalajs.core.compiler.JSEncoding.encodeRTStringMethodSym(JSEncoding.scala:159)
+[error] org.scalajs.core.compiler.JSEncoding.encodeRTStringMethodSym$(JSEncoding.scala:156)
+[error] org.scalajs.core.compiler.GenJSCode.encodeRTStringMethodSym(GenJSCode.scala:31)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$genApplyDynamic$7(GenJSCode.scala:3770)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$genApplyDynamic$7$adapted(GenJSCode.scala:3754)
+[error] scala.collection.TraversableLike$WithFilter.$anonfun$foreach$1(TraversableLike.scala:789)
+[error] scala.collection.immutable.List.foreach(List.scala:389)
+[error] scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:788)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.genApplyDynamic(GenJSCode.scala:3754)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.genStatOrExpr(GenJSCode.scala:1803)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.genExpr(GenJSCode.scala:1728)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.genIsAsInstanceOf(GenJSCode.scala:2288)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.genApplyTypeApply(GenJSCode.scala:2276)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.genApply(GenJSCode.scala:2231)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.genStatOrExpr(GenJSCode.scala:1800)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.genExpr(GenJSCode.scala:1728)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.genBody$1(GenJSCode.scala:1683)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.genMethodDef(GenJSCode.scala:1688)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$genMethodWithCurrentLocalNameScope$8(GenJSCode.scala:1499)
+[error] org.scalajs.core.compiler.util.ScopedVar$.withScopedVars(ScopedVar.scala:35)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$genMethodWithCurrentLocalNameScope$1(GenJSCode.scala:1461)
+[error] org.scalajs.core.compiler.util.ScopedVar$.withScopedVars(ScopedVar.scala:35)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.genMethodWithCurrentLocalNameScope(GenJSCode.scala:1406)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$genMethod$1(GenJSCode.scala:1371)
+[error] org.scalajs.core.compiler.util.ScopedVar$.withScopedVars(ScopedVar.scala:35)
+[error] org.scalajs.core.compiler.JSEncoding.withNewLocalNameScope(JSEncoding.scala:54)
+[error] org.scalajs.core.compiler.JSEncoding.withNewLocalNameScope$(JSEncoding.scala:50)
+[error] org.scalajs.core.compiler.GenJSCode.withNewLocalNameScope(GenJSCode.scala:31)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.genMethod(GenJSCode.scala:1371)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.gen$1(GenJSCode.scala:380)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$genClass$3(GenJSCode.scala:371)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$genClass$3$adapted(GenJSCode.scala:371)
+[error] scala.collection.immutable.List.foreach(List.scala:389)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.gen$1(GenJSCode.scala:371)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.genClass(GenJSCode.scala:386)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$apply$5(GenJSCode.scala:302)
+[error] org.scalajs.core.compiler.util.ScopedVar$.withScopedVars(ScopedVar.scala:35)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$apply$4(GenJSCode.scala:289)
+[error] scala.collection.immutable.List.foreach(List.scala:389)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.apply(GenJSCode.scala:276)
+[error] scala.tools.nsc.Global$GlobalPhase.$anonfun$applyPhase$1(Global.scala:436)
+[error] scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:429)
+[error] scala.tools.nsc.Global$GlobalPhase.$anonfun$run$1(Global.scala:400)
+[error] scala.tools.nsc.Global$GlobalPhase.$anonfun$run$1$adapted(Global.scala:400)
+[error] scala.collection.Iterator.foreach(Iterator.scala:929)
+[error] scala.collection.Iterator.foreach$(Iterator.scala:929)
+[error] scala.collection.AbstractIterator.foreach(Iterator.scala:1417)
+[error] scala.tools.nsc.Global$GlobalPhase.run(Global.scala:400)
+[error] org.scalajs.core.compiler.GenJSCode$JSCodePhase.run(GenJSCode.scala:217)
+[error] scala.tools.nsc.Global$Run.compileUnitsInternal(Global.scala:1452)
+[error] scala.tools.nsc.Global$Run.compileUnits(Global.scala:1436)
+[error] scala.tools.nsc.Global$Run.compileSources(Global.scala:1429)
+[error] scala.tools.nsc.Global$Run.compile(Global.scala:1545)
+[error] xsbt.CachedCompiler0.run(CompilerInterface.scala:131)
+[error] xsbt.CachedCompiler0.run(CompilerInterface.scala:106)
+[error] xsbt.CompilerInterface.run(CompilerInterface.scala:32)
+[error] sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[error] sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[error] sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[error] java.lang.reflect.Method.invoke(Method.java:498)
+[error] sbt.internal.inc.AnalyzingCompiler.call(AnalyzingCompiler.scala:237)
+[error] sbt.internal.inc.AnalyzingCompiler.compile(AnalyzingCompiler.scala:111)
+[error] sbt.internal.inc.AnalyzingCompiler.compile(AnalyzingCompiler.scala:90)
+[error] sbt.internal.inc.MixedAnalyzingCompiler.$anonfun$compile$3(MixedAnalyzingCompiler.scala:83)
+[error] scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+[error] sbt.internal.inc.MixedAnalyzingCompiler.timed(MixedAnalyzingCompiler.scala:134)
+[error] sbt.internal.inc.MixedAnalyzingCompiler.compileScala$1(MixedAnalyzingCompiler.scala:74)
+[error] sbt.internal.inc.MixedAnalyzingCompiler.compile(MixedAnalyzingCompiler.scala:117)
+[error] sbt.internal.inc.IncrementalCompilerImpl.$anonfun$compileInternal$1(IncrementalCompilerImpl.scala:305)
+[error] sbt.internal.inc.IncrementalCompilerImpl.$anonfun$compileInternal$1$adapted(IncrementalCompilerImpl.scala:305)
+[error] sbt.internal.inc.Incremental$.doCompile(Incremental.scala:101)
+[error] sbt.internal.inc.Incremental$.$anonfun$compile$4(Incremental.scala:82)
+[error] sbt.internal.inc.IncrementalCommon.recompileClasses(IncrementalCommon.scala:117)
+[error] sbt.internal.inc.IncrementalCommon.cycle(IncrementalCommon.scala:64)
+[error] sbt.internal.inc.Incremental$.$anonfun$compile$3(Incremental.scala:84)
+[error] sbt.internal.inc.Incremental$.manageClassfiles(Incremental.scala:129)
+[error] sbt.internal.inc.Incremental$.compile(Incremental.scala:75)
+[error] sbt.internal.inc.IncrementalCompile$.apply(Compile.scala:70)
+[error] sbt.internal.inc.IncrementalCompilerImpl.compileInternal(IncrementalCompilerImpl.scala:309)
+[error] sbt.internal.inc.IncrementalCompilerImpl.$anonfun$compileIncrementally$1(IncrementalCompilerImpl.scala:267)
+[error] sbt.internal.inc.IncrementalCompilerImpl.handleCompilationError(IncrementalCompilerImpl.scala:158)
+[error] sbt.internal.inc.IncrementalCompilerImpl.compileIncrementally(IncrementalCompilerImpl.scala:237)
+[error] sbt.internal.inc.IncrementalCompilerImpl.compile(IncrementalCompilerImpl.scala:68)
+[error] sbt.Defaults$.compileIncrementalTaskImpl(Defaults.scala:1406)
+[error] sbt.Defaults$.$anonfun$compileIncrementalTask$1(Defaults.scala:1388)
+[error] scala.Function1.$anonfun$compose$1(Function1.scala:44)
+[error] sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:42)
+[error] sbt.std.Transform$$anon$4.work(System.scala:64)
+[error] sbt.Execute.$anonfun$submit$2(Execute.scala:257)
+[error] sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:16)
+[error] sbt.Execute.work(Execute.scala:266)
+[error] sbt.Execute.$anonfun$submit$1(Execute.scala:257)
+[error] sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:167)
+[error] sbt.CompletionService$$anon$2.call(CompletionService.scala:32)
+[error] java.util.concurrent.FutureTask.run(FutureTask.java:266)
+[error] java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+[error] java.util.concurrent.FutureTask.run(FutureTask.java:266)
+[error] java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+[error] java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+[error] java.lang.Thread.run(Thread.java:748)
+[error]            
+[error] java.lang.IllegalArgumentException: requirement failed: 
+[error]   
+[error]      while compiling: /Users/sarah/Code/parser-fail/Fail.scala
+[error]         during phase: jscode
+[error]      library version: version 2.12.4
+[error]     compiler version: version 2.12.4
+[error]   reconstructed args: -bootclasspath /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/classes:/Users/sarah/.sbt/boot/scala-2.12.4/lib/scala-library.jar -classpath /Users/sarah/Code/parser-fail/target/scala-2.12/classes:/Users/sarah/.ivy2/cache/org.scala-js/scalajs-library_2.12/jars/scalajs-library_2.12-0.6.21.jar -Xplugin:/Users/sarah/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.4/jars/scalajs-compiler_2.12.4-0.6.21.jar
+[error] 
+[error]   last tree to typer: TypeTree(class String)
+[error]        tree position: line 5 of /Users/sarah/Code/parser-fail/Fail.scala
+[error]             tree tpe: String
+[error]               symbol: final class String in package lang
+[error]    symbol definition: final class String extends Serializable with Comparable with CharSequence (a ClassSymbol)
+[error]       symbol package: java.lang
+[error]        symbol owners: class String
+[error]            call site: object LexerUtil in package <empty>
+[error] 
+[error] == Source file context for tree position ==
+[error] 
+[error]      2 
+[error]      3 object LexerUtil {
+[error]      4   def reflectiveLongest[A <: { def chars: String }](data: A): Unit = {
+[error]      5     val fn = { a: A => a.chars }
+[error]      6     ()
+[error]      7   }
+[error]      8 }
+[error] 	at scala.tools.nsc.Global.require(Global.scala:279)
+[error] 	at org.scalajs.core.compiler.JSEncoding.encodeRTStringMethodSym(JSEncoding.scala:159)
+[error] 	at org.scalajs.core.compiler.JSEncoding.encodeRTStringMethodSym$(JSEncoding.scala:156)
+[error] 	at org.scalajs.core.compiler.GenJSCode.encodeRTStringMethodSym(GenJSCode.scala:31)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$genApplyDynamic$7(GenJSCode.scala:3770)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$genApplyDynamic$7$adapted(GenJSCode.scala:3754)
+[error] 	at scala.collection.TraversableLike$WithFilter.$anonfun$foreach$1(TraversableLike.scala:789)
+[error] 	at scala.collection.immutable.List.foreach(List.scala:389)
+[error] 	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:788)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.genApplyDynamic(GenJSCode.scala:3754)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.genStatOrExpr(GenJSCode.scala:1803)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.genExpr(GenJSCode.scala:1728)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.genIsAsInstanceOf(GenJSCode.scala:2288)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.genApplyTypeApply(GenJSCode.scala:2276)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.genApply(GenJSCode.scala:2231)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.genStatOrExpr(GenJSCode.scala:1800)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.genExpr(GenJSCode.scala:1728)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.genBody$1(GenJSCode.scala:1683)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.genMethodDef(GenJSCode.scala:1688)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$genMethodWithCurrentLocalNameScope$8(GenJSCode.scala:1499)
+[error] 	at org.scalajs.core.compiler.util.ScopedVar$.withScopedVars(ScopedVar.scala:35)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$genMethodWithCurrentLocalNameScope$1(GenJSCode.scala:1461)
+[error] 	at org.scalajs.core.compiler.util.ScopedVar$.withScopedVars(ScopedVar.scala:35)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.genMethodWithCurrentLocalNameScope(GenJSCode.scala:1406)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$genMethod$1(GenJSCode.scala:1371)
+[error] 	at org.scalajs.core.compiler.util.ScopedVar$.withScopedVars(ScopedVar.scala:35)
+[error] 	at org.scalajs.core.compiler.JSEncoding.withNewLocalNameScope(JSEncoding.scala:54)
+[error] 	at org.scalajs.core.compiler.JSEncoding.withNewLocalNameScope$(JSEncoding.scala:50)
+[error] 	at org.scalajs.core.compiler.GenJSCode.withNewLocalNameScope(GenJSCode.scala:31)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.genMethod(GenJSCode.scala:1371)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.gen$1(GenJSCode.scala:380)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$genClass$3(GenJSCode.scala:371)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$genClass$3$adapted(GenJSCode.scala:371)
+[error] 	at scala.collection.immutable.List.foreach(List.scala:389)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.gen$1(GenJSCode.scala:371)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.genClass(GenJSCode.scala:386)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$apply$5(GenJSCode.scala:302)
+[error] 	at org.scalajs.core.compiler.util.ScopedVar$.withScopedVars(ScopedVar.scala:35)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.$anonfun$apply$4(GenJSCode.scala:289)
+[error] 	at scala.collection.immutable.List.foreach(List.scala:389)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.apply(GenJSCode.scala:276)
+[error] 	at scala.tools.nsc.Global$GlobalPhase.$anonfun$applyPhase$1(Global.scala:436)
+[error] 	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:429)
+[error] 	at scala.tools.nsc.Global$GlobalPhase.$anonfun$run$1(Global.scala:400)
+[error] 	at scala.tools.nsc.Global$GlobalPhase.$anonfun$run$1$adapted(Global.scala:400)
+[error] 	at scala.collection.Iterator.foreach(Iterator.scala:929)
+[error] 	at scala.collection.Iterator.foreach$(Iterator.scala:929)
+[error] 	at scala.collection.AbstractIterator.foreach(Iterator.scala:1417)
+[error] 	at scala.tools.nsc.Global$GlobalPhase.run(Global.scala:400)
+[error] 	at org.scalajs.core.compiler.GenJSCode$JSCodePhase.run(GenJSCode.scala:217)
+[error] 	at scala.tools.nsc.Global$Run.compileUnitsInternal(Global.scala:1452)
+[error] 	at scala.tools.nsc.Global$Run.compileUnits(Global.scala:1436)
+[error] 	at scala.tools.nsc.Global$Run.compileSources(Global.scala:1429)
+[error] 	at scala.tools.nsc.Global$Run.compile(Global.scala:1545)
+[error] 	at xsbt.CachedCompiler0.run(CompilerInterface.scala:131)
+[error] 	at xsbt.CachedCompiler0.run(CompilerInterface.scala:106)
+[error] 	at xsbt.CompilerInterface.run(CompilerInterface.scala:32)
+[error] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[error] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[error] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[error] 	at java.lang.reflect.Method.invoke(Method.java:498)
+[error] 	at sbt.internal.inc.AnalyzingCompiler.call(AnalyzingCompiler.scala:237)
+[error] 	at sbt.internal.inc.AnalyzingCompiler.compile(AnalyzingCompiler.scala:111)
+[error] 	at sbt.internal.inc.AnalyzingCompiler.compile(AnalyzingCompiler.scala:90)
+[error] 	at sbt.internal.inc.MixedAnalyzingCompiler.$anonfun$compile$3(MixedAnalyzingCompiler.scala:83)
+[error] 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+[error] 	at sbt.internal.inc.MixedAnalyzingCompiler.timed(MixedAnalyzingCompiler.scala:134)
+[error] 	at sbt.internal.inc.MixedAnalyzingCompiler.compileScala$1(MixedAnalyzingCompiler.scala:74)
+[error] 	at sbt.internal.inc.MixedAnalyzingCompiler.compile(MixedAnalyzingCompiler.scala:117)
+[error] 	at sbt.internal.inc.IncrementalCompilerImpl.$anonfun$compileInternal$1(IncrementalCompilerImpl.scala:305)
+[error] 	at sbt.internal.inc.IncrementalCompilerImpl.$anonfun$compileInternal$1$adapted(IncrementalCompilerImpl.scala:305)
+[error] 	at sbt.internal.inc.Incremental$.doCompile(Incremental.scala:101)
+[error] 	at sbt.internal.inc.Incremental$.$anonfun$compile$4(Incremental.scala:82)
+[error] 	at sbt.internal.inc.IncrementalCommon.recompileClasses(IncrementalCommon.scala:117)
+[error] 	at sbt.internal.inc.IncrementalCommon.cycle(IncrementalCommon.scala:64)
+[error] 	at sbt.internal.inc.Incremental$.$anonfun$compile$3(Incremental.scala:84)
+[error] 	at sbt.internal.inc.Incremental$.manageClassfiles(Incremental.scala:129)
+[error] 	at sbt.internal.inc.Incremental$.compile(Incremental.scala:75)
+[error] 	at sbt.internal.inc.IncrementalCompile$.apply(Compile.scala:70)
+[error] 	at sbt.internal.inc.IncrementalCompilerImpl.compileInternal(IncrementalCompilerImpl.scala:309)
+[error] 	at sbt.internal.inc.IncrementalCompilerImpl.$anonfun$compileIncrementally$1(IncrementalCompilerImpl.scala:267)
+[error] 	at sbt.internal.inc.IncrementalCompilerImpl.handleCompilationError(IncrementalCompilerImpl.scala:158)
+[error] 	at sbt.internal.inc.IncrementalCompilerImpl.compileIncrementally(IncrementalCompilerImpl.scala:237)
+[error] 	at sbt.internal.inc.IncrementalCompilerImpl.compile(IncrementalCompilerImpl.scala:68)
+[error] 	at sbt.Defaults$.compileIncrementalTaskImpl(Defaults.scala:1406)
+[error] 	at sbt.Defaults$.$anonfun$compileIncrementalTask$1(Defaults.scala:1388)
+[error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:44)
+[error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:42)
+[error] 	at sbt.std.Transform$$anon$4.work(System.scala:64)
+[error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:257)
+[error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:16)
+[error] 	at sbt.Execute.work(Execute.scala:266)
+[error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:257)
+[error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:167)
+[error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:32)
+[error] 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+[error] 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+[error] 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+[error] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+[error] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+[error] 	at java.lang.Thread.run(Thread.java:748)
+[error] (compile:compileIncremental) java.lang.IllegalArgumentException: requirement failed: 
+[error]   
+[error]      while compiling: /Users/sarah/Code/parser-fail/Fail.scala
+[error]         during phase: jscode
+[error]      library version: version 2.12.4
+[error]     compiler version: version 2.12.4
+[error]   reconstructed args: -bootclasspath /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/classes:/Users/sarah/.sbt/boot/scala-2.12.4/lib/scala-library.jar -classpath /Users/sarah/Code/parser-fail/target/scala-2.12/classes:/Users/sarah/.ivy2/cache/org.scala-js/scalajs-library_2.12/jars/scalajs-library_2.12-0.6.21.jar -Xplugin:/Users/sarah/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.4/jars/scalajs-compiler_2.12.4-0.6.21.jar
+[error] 
+[error]   last tree to typer: TypeTree(class String)
+[error]        tree position: line 5 of /Users/sarah/Code/parser-fail/Fail.scala
+[error]             tree tpe: String
+[error]               symbol: final class String in package lang
+[error]    symbol definition: final class String extends Serializable with Comparable with CharSequence (a ClassSymbol)
+[error]       symbol package: java.lang
+[error]        symbol owners: class String
+[error]            call site: object LexerUtil in package <empty>
+[error] 
+[error] == Source file context for tree position ==
+[error] 
+[error]      2 
+[error]      3 object LexerUtil {
+[error]      4   def reflectiveLongest[A <: { def chars: String }](data: A): Unit = {
+[error]      5     val fn = { a: A => a.chars }
+[error]      6     ()
+[error]      7   }
+[error]      8 }
+[error] Total time: 1 s, completed Dec 4, 2017 4:26:30 PM
